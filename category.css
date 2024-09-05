@@ -1,0 +1,38 @@
+.category-container {
+}
+
+/* Popup text - hidden by default */
+.category-popup {
+    /*visibility: hidden;*/
+    width: 200px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 5px;
+    padding: 10px;
+    position: absolute;
+    z-index: 1;
+    bottom: 200%;  /* Adjust this to control the position */
+    left: 50%;
+    margin-left: -100px;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+/* Arrow at the bottom of the popup */
+.category-popup::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+}
+
+/* Show the popup when hovering over the container */
+.category-container:hover .category-popup {
+    visibility: visible;
+    opacity: 1;
+}
